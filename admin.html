@@ -72,6 +72,11 @@ async function openUser(id){
  <div class="sectionhead"><div><h2>Available balance</h2><div class="sub">Manage this user's wallet balance.</div></div><button class="btn primary" onclick="openBalanceModal('${esc(id)}')">Manage balance</button></div>
  <div style="font-size:28px;font-weight:850;color:var(--gold)">${esc(money(u.availableBalance))}</div>
  </div>
+ <div class="card" style="margin-top:18px;background:#111d29">
+ <div class="sectionhead"><div><h2>Identity verification (KYC)</h2><div class="sub">Review submitted legal name and CNIC. Keep this information confidential.</div></div><span class="pill ${esc((u.kyc?.status)||"not submitted")}">${esc(u.kyc?.status||"Not submitted")}</span></div>
+ <div class="detailgrid" style="margin-top:10px"><div class="field"><label>Legal name</label><p>${esc(u.kyc?.legalName||"—")}</p></div><div class="field"><label>CNIC number</label><p style="font-family:monospace;letter-spacing:1px">${u.kyc?.cnic?`<span id="kycCnicValue">${esc(u.kyc.cnic.replace(/.(?=.{4})/g,"•"))}</span> <button class="btn small" onclick="toggleKycCnic('${esc(id)}')">Reveal</button>`:"—"}</p></div><div class="field"><label>Submitted</label><p>${esc(date(u.kyc?.submittedAt))}</p></div><div class="field"><label>Review note</label><p>${esc(u.kyc?.reviewNote||"—")}</p></div></div>
+ ${u.kyc?.status==="pending"?`<div class="row" style="margin-top:12px"><button class="btn primary" onclick="reviewKyc('${esc(id)}','approved')">Approve KYC</button><button class="btn danger" onclick="reviewKyc('${esc(id)}','rejected')">Reject KYC</button></div>`:""}
+ </div>
  <div class="sectionhead" style="margin-top:20px"><div><h2>Edit user details</h2></div></div>
  <div class="detailgrid" style="margin-top:10px">
  <div class="field"><label>Name</label><input id="editUserName" value="${esc(name)}" placeholder="Full name"></div>
@@ -83,6 +88,17 @@ async function openUser(id){
  <div class="field" style="grid-column:1/-1"><label>Admin note</label><textarea id="editUserAdminNote" rows="2" placeholder="Internal note">${esc(u.adminNote||"")}</textarea></div>
  </div><div class="row" style="margin-top:10px"><button class="btn primary" onclick="saveUserProfile('${esc(id)}')">Save user details</button></div>
  </div>`;
+}
+function toggleKycCnic(id){const u=users.find(x=>x.id===id);const el=$("kycCnicValue");if(!u?.kyc?.cnic||!el)return;const revealed=el.dataset.revealed==="1";el.textContent=revealed?u.kyc.cnic.replace(/.(?=.{4})/g,"•"):u.kyc.cnic;el.dataset.revealed=revealed?"0":"1";}
+async function reviewKyc(id,status){
+ const u=users.find(x=>x.id===id);if(!u?.kyc)return message("No KYC submission found.","error");
+ if(!["approved","rejected"].includes(status))return;
+ const note=prompt(status==="approved"?"Optional verification note:":"Reason for rejection (required):","");
+ if(note===null)return;if(status==="rejected"&&!note.trim())return message("Please enter a rejection reason.","error");
+ if(!confirm(`Confirm ${status} for this KYC submission?`))return;
+ try{await db.collection("users").doc(id).update({kyc:{...u.kyc,status,reviewNote:note.trim(),reviewedAt:firebase.firestore.FieldValue.serverTimestamp(),reviewedBy:auth.currentUser?.email||"admin"},isVerified:status==="approved",verifiedAt:status==="approved"?firebase.firestore.FieldValue.serverTimestamp():null});
+ const fresh=await db.collection("users").doc(id).get();if(fresh.exists){const updated={id,...fresh.data()};users=users.map(x=>x.id===id?updated:x);selectedUser=updated;openUser(id);renderUsers();}message(`KYC ${status}.`);
+ }catch(e){message("KYC review failed: "+e.message,"error")}
 }
 function openUserBalance(id){openBalanceModal(id)}
 function openBalanceModal(id){const u=users.find(x=>x.id===id);if(!u)return message("User record not found.","error");const old=document.getElementById("balanceModalBack");if(old)old.remove();const back=document.createElement("div");back.id="balanceModalBack";back.className="modalback";back.innerHTML=`<div class="modal balance-modal"><div class="sectionhead"><div><h2>Manage balance</h2><div class="sub">${esc(u.email||u.id)}</div></div><button class="btn" onclick="closeBalanceModal()">✕</button></div><div class="sub">Current available balance</div><div class="current">${esc(money(u.availableBalance))}</div><div class="field"><label>Action</label><select id="balanceAction"><option value="credit">Add balance</option><option value="debit">Subtract balance</option></select></div><div class="field"><label>Amount</label><input id="balanceAmount" type="number" min="0.01" step="0.01" placeholder="Enter amount"></div><div class="field"><label>Reason</label><input id="balanceReason" maxlength="300" placeholder="Enter reason"></div><div class="actions"><button class="btn" onclick="closeBalanceModal()">Cancel</button><button class="btn primary" id="balanceSaveBtn" onclick="saveBalanceChange('${esc(id)}')">Save balance</button></div><div class="note" style="margin-top:12px">Changes are recorded on the user profile with the admin and timestamp.</div></div>`;back.addEventListener("click",e=>{if(e.target===back)closeBalanceModal()});document.body.appendChild(back)}
