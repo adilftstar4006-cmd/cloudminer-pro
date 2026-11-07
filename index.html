@@ -2762,7 +2762,7 @@ Error generating stack: `+u.message+`
     var div = document.createElement('div');
     div.id='cm-name-wrap';
     div.className='relative group';
-    div.innerHTML = '<span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:14px">👤</span><input id="cm-name-input" placeholder="Full Name — e.g. Muhammad Adil" autocomplete="name" style="width:100%;height:46px;padding-left:40px;padding-right:12px;background:#0a0e13;border:1px solid #2a2e35;border-radius:12px;color:#fff;font-size:14px;outline:none" />';
+    div.innerHTML = '<span style="position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:14px">👤</span><input id="cm-name-input" placeholder="Full Name" autocomplete="name" style="width:100%;height:46px;padding-left:40px;padding-right:12px;background:#0a0e13;border:1px solid #2a2e35;border-radius:12px;color:#fff;font-size:14px;outline:none" />';
     wrap.parentNode.insertBefore(div, wrap);
     var inp = document.getElementById('cm-name-input');
     inp.addEventListener('input', function(){ window.__signupName = this.value.trim(); try{localStorage.setItem('cm_signup_name', this.value)}catch(e){} });
