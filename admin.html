@@ -30,53 +30,78 @@ table td{border-bottom:1px solid #1a2836}
 .modal{background:#101923;border:1px solid #263646;border-radius:16px;padding:20px;width:100%;max-width:480px;max-height:90vh;overflow:auto}
 .modal input,.modal select,.modal textarea{background:#0a111a;border:1px solid #263646;border-radius:8px;color:#eef4fa;padding:9px 11px;width:100%}
 
-/* ===== Professional Dashboard v2 ===== */
-body{background:radial-gradient(ellipse at 75% -10%,#1e3448 0,transparent 42%),radial-gradient(ellipse at 10% 110%,#14202e 0,transparent 45%),#080d13}
-.top{height:64px;padding:0 22px;background:rgba(10,17,26,.92);border-bottom:1px solid #223344}
-.brand{font-size:18px}
-.brand b{color:#f4c84a}
-.tag{background:#f4c84a1a;border-color:#f4c84a55;color:#f4c84a;font-weight:800}
-aside{width:250px;background:#0b121a;padding:18px 12px}
-.nav{border-radius:12px;padding:12px 13px;margin:4px 0;font-size:13.5px}
-.nav.active{background:linear-gradient(90deg,#f4c84a22,#f4c84a0a);color:#fff;border-color:#f4c84a44}
-.nav.active .ico{color:#f4c84a}
-main{padding:28px}
-.heading h1{font-size:27px;letter-spacing:-.6px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.cards .card{position:relative;overflow:hidden;padding:18px;border-radius:16px;background:linear-gradient(180deg,#121f2e,#0f1a26)}
-.cards .card::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,#f4c84a,#ff8a00)}
-.cards .card:nth-child(2)::before{background:linear-gradient(90deg,#48d6a0,#00b894)}
-.cards .card:nth-child(3)::before{background:linear-gradient(90deg,#79b6ff,#0072ff)}
-.cards .card:nth-child(4)::before{background:linear-gradient(90deg,#c084fc,#7c3aed)}
-.statlabel{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#8aa0b5;font-weight:800}
-.statvalue{font-size:28px;font-weight:900;letter-spacing:-.5px;margin:8px 0 4px}
-.statnote{font-size:11.5px;color:#7d93a8}
-.charts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
-.charts .card{border-radius:16px;padding:18px}
-.chartbox{height:240px}
-.card.section{margin-top:14px;border-radius:16px}
-table{width:100%;border-collapse:collapse}
-table thead th{padding:11px 12px;text-align:left}
-table tbody td{padding:11px 12px}
-/* Login - professional */
-.login-wrap{min-height:calc(100vh - 64px);display:flex;align-items:center;justify-content:center;padding:24px}
-.login-card{width:100%;max-width:420px;background:linear-gradient(180deg,#121f2e,#0f1a26);border:1px solid #263646;border-radius:20px;padding:28px;box-shadow:0 24px 60px #0008;text-align:center}
-.login-logo{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#f4c84a,#ff8a00);display:flex;align-items:center;justify-content:center;font-size:28px;color:#17130a;font-weight:900;margin:0 auto 14px;box-shadow:0 10px 30px #f4c84a44}
-.login-card h1{font-size:22px;margin:0 0 6px}
-.login-sub{color:#91a3b7;font-size:13px;line-height:1.6;margin:0 0 18px}
-.login-card input{width:100%;background:#0a111a;border:1px solid #263646;border-radius:12px;color:#eef4fa;padding:12px 14px;margin-bottom:10px}
-.login-card input:focus{outline:none;border-color:#f4c84a88}
-.login-hint{margin-top:14px;font-size:11.5px;color:#7d93a8;line-height:1.7}
-@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}aside{width:200px}}
-@media(max-width:640px){aside{display:none}.cards{grid-template-columns:1fr}main{padding:16px}.top{padding:0 14px}}
+/* ===== NEW THEME - Fresh Light, Easy to Use ===== */
+:root{--bg:#EEF1F5;--panel:#FFFFFF;--panel2:#F7F9FB;--line:#E2E8F0;--muted:#64748B;--text:#0F1E2E;--gold:#0EA47A;--green:#0EA47A;--red:#E5484D;--blue:#2563EB;--shadow:0 8px 30px rgba(15,30,46,.08)}
+body{background:#EEF1F5;color:#0F1E2E}
+.top{height:64px;background:#fff;border-bottom:1px solid #E2E8F0;box-shadow:0 2px 12px rgba(15,30,46,.06)}
+.brand{color:#0F1E2E;font-size:18px}
+.brand b{color:#0EA47A}
+.brand::before{background:linear-gradient(135deg,#0EA47A,#06B6A0)!important;box-shadow:0 6px 16px rgba(14,164,122,.35)!important}
+.tag{background:#E6F7F1!important;border-color:#BFE9DB!important;color:#0EA47A!important}
+aside{background:#fff!important;border-right:1px solid #E2E8F0!important}
+.nav{color:#475569!important;border-radius:12px}
+.nav:hover{background:#F1F5F9!important;color:#0F1E2E!important}
+.nav.active{background:#E6F7F1!important;color:#0EA47A!important;border-color:#BFE9DB!important}
+.nav.active .ico{color:#0EA47A!important}
+.navlabel{color:#94A3B8!important}
+.asidefoot{color:#64748B!important;border-top:1px solid #E2E8F0!important}
+main{background:#EEF1F5}
+.heading h1{color:#0F1E2E}
+.sub{color:#64748B!important}
+.btn{background:#fff!important;border:1px solid #E2E8F0!important;color:#0F1E2E!important;border-radius:12px!important;padding:11px 16px!important;font-size:13px;box-shadow:0 1px 3px rgba(15,30,46,.06)}
+.btn:hover{border-color:#CBD5E1!important;transform:none}
+.btn.primary{background:#0EA47A!important;border-color:#0EA47A!important;color:#fff!important}
+.btn.primary:hover{background:#0B8A66!important}
+.btn.danger{background:#FEF2F2!important;border-color:#FECACA!important;color:#DC2626!important}
+.card,.plan-card{background:#fff!important;border:1px solid #E2E8F0!important;border-radius:18px!important;box-shadow:0 4px 20px rgba(15,30,46,.05)!important;color:#0F1E2E}
+.cards .card::before{background:linear-gradient(90deg,#0EA47A,#06B6A0)!important}
+.cards .card:nth-child(2)::before{background:linear-gradient(90deg,#2563EB,#60A5FA)!important}
+.cards .card:nth-child(3)::before{background:linear-gradient(90deg,#F59E0B,#FBBF24)!important}
+.cards .card:nth-child(4)::before{background:linear-gradient(90deg,#8B5CF6,#C084FC)!important}
+.statlabel{color:#64748B!important}
+.statvalue{color:#0F1E2E}
+.statnote{color:#94A3B8!important}
+table th{color:#64748B!important;background:#F8FAFC}
+table td{color:#0F1E2E;border-bottom:1px solid #EEF1F5!important}
+table tr:hover td{background:#F8FAFC}
+input,textarea,select{background:#fff!important;border:1px solid #E2E8F0!important;color:#0F1E2E!important;border-radius:12px!important;padding:11px 13px!important}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#0EA47A!important;box-shadow:0 0 0 3px rgba(14,164,122,.15)}
+.pill{background:#F1F5F9;color:#475569}
+.pill.active,.pill.approved{background:#E6F7F1!important;color:#0EA47A!important}
+.pill.banned,.pill.rejected{background:#FEF2F2!important;color:#DC2626!important}
+.pill.pending{background:#FEF3C7!important;color:#D97706!important}
+.detailgrid .field,.field{color:#0F1E2E}
+.field label,.field p{color:#0F1E2E}
+.field p{color:#334155}
+.modal,.balance-modal{background:#fff!important;border:1px solid #E2E8F0!important;color:#0F1E2E;box-shadow:0 24px 60px rgba(15,30,46,.18)}
+.modalback{background:rgba(15,30,46,.45)!important}
+.danger-zone{background:#FEF2F2!important;border-color:#FECACA!important}
+.danger-zone h2{color:#DC2626!important}
+.plan-card input,.plan-card select{background:#F8FAFC!important}
+.login-wrap{min-height:calc(100vh - 64px);display:flex;align-items:center;justify-content:center;padding:24px;background:linear-gradient(180deg,#EEF1F5,#E2F5EE)}
+.login-card{width:100%;max-width:420px;background:#fff!important;border:1px solid #E2E8F0;border-radius:22px;padding:30px;box-shadow:0 20px 50px rgba(15,30,46,.12);text-align:center}
+.login-logo{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#0EA47A,#06B6A0);display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;font-weight:900;margin:0 auto 14px}
+.login-card h1{color:#0F1E2E;font-size:22px;margin:0 0 6px}
+.login-sub{color:#64748B;font-size:13px;line-height:1.6;margin:0 0 18px}
+.login-hint{margin-top:14px;font-size:11.5px;color:#94A3B8;line-height:1.7}
+.empty{color:#94A3B8}
+.note{color:#64748B}
+.msg.success{background:#E6F7F1;color:#0B8A66;border:1px solid #BFE9DB}
+.msg.error{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+/* Easy to use: bigger touch, clearer sections */
+.btn{ min-height:42px }
+.btn.small{ min-height:34px; padding:8px 12px!important }
+.heading{ gap:12px }
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}}
+@media(max-width:640px){aside{display:none}.cards{grid-template-columns:1fr}main{padding:16px}}
 </style></head><body>
 <header class="top"><div class="brand"><b>◈ CLOUD</b>MINER <span class="tag">ADMIN CONTROL CENTER</span></div><div class="row"><span id="adminEmail" class="sub"></span><button id="refreshBtn" class="btn hidden" onclick="refreshAll()">↻ Sync</button><button id="logoutBtn" class="btn hidden" onclick="logout()">Logout</button></div></header>
-<div id="login" class="login-wrap"><div class="login-card"><div class="login-logo">◈</div><h1>Administrator sign in</h1><p class="login-sub">CloudMiner Admin Control Center<br>Sign in with your Firebase administrator account.</p><div class="sub">Authenticate with your Firebase administrator account.</div><input id="email" type="email" autocomplete="username" placeholder="Admin email"><input id="password" type="password" autocomplete="current-password" placeholder="Password"><button class="btn primary" style="width:100%;margin-top:14px" onclick="login()">Sign in securely</button><div id="loginMsg" class="note" style="margin-top:12px"></div><div class="login-hint">Having trouble opening? Check internet, then refresh. Admin email: <b>admin@cloudminer.com</b><br><span id="firebaseStatus" class="sub">Checking connection…</span></div></div></div>
+<div id="login" class="login-wrap"><div class="login-card"><div class="login-logo">◈</div><h1>Administrator sign in</h1><p class="login-sub">CloudMiner Admin Control Center<br>Sign in with your Firebase administrator account.</p><div class="sub">Authenticate with your Firebase administrator account.</div><input id="email" type="email" autocomplete="username" placeholder="Admin email"><input id="password" type="password" autocomplete="current-password" placeholder="Password"><button class="btn primary" style="width:100%;margin-top:14px" onclick="login()">Sign in securely</button><div id="loginMsg" class="note" style="margin-top:12px"></div><div class="login-hint">Having trouble? Check internet, then refresh. Admin email: <b>admin@cloudminer.com</b><br><span id="firebaseStatus" class="sub">Checking connection…</span></div></div></div>
 <div id="app" class="layout hidden"><aside><div class="navlabel">CONTROL CENTER</div>
 <button class="nav active" data-page="dashboard" onclick="showPage('dashboard')"><span class="ico">▦</span>Overview</button><button class="nav" data-page="users" onclick="showPage('users')"><span class="ico">♙</span>Users</button><button class="nav" data-page="deposits" onclick="showPage('deposits')"><span class="ico">↙</span>Deposits</button><button class="nav" data-page="withdrawals" onclick="showPage('withdrawals')"><span class="ico">↗</span>Withdrawals</button><button class="nav" data-page="notifications" onclick="showPage('notifications')"><span class="ico">◉</span>Notifications</button><button class="nav" data-page="settings" onclick="showPage('settings')"><span class="ico">⚙</span>Settings</button>
 <div class="asidefoot">FIREBASE PROJECT<br><b>cloudminer-pro</b><br><span class="connection"><i class="dot"></i><span id="connection">Connecting</span></span><br><span id="lastSync">Waiting for data</span></div></aside>
 <main><div id="notice" class="hidden"></div>
-<section id="page-dashboard"><div class="heading"><div><h1>Operations overview</h1><div class="sub">Live metrics calculated from the existing Firestore records.</div></div><div class="row"><span class="pill active" style="padding:6px 10px">● LIVE</span><button class="btn" onclick="showPage('users')">View users</button><button class="btn primary" onclick="refreshAll()">↻ Sync now</button></div></div>
+<section id="page-dashboard"><div class="heading"><div><h1>Dashboard — Sab Kuch Ek Jagah</h1><div class="sub">Live metrics calculated from the existing Firestore records.</div></div><span class="sub">Live dashboard</span></div>
 <div class="cards"><div class="card"><div class="statlabel">Registered users</div><div class="statvalue" id="statUsers">…</div><div class="statnote">User documents</div></div><div class="card"><div class="statlabel">Available balances</div><div class="statvalue" id="statAvailable">…</div><div class="statnote">Sum of user records</div></div><div class="card"><div class="statlabel">Total staked balance</div><div class="statvalue" id="statStaked">…</div><div class="statnote">Sum of user records</div></div><div class="card"><div class="statlabel">Total hash rate</div><div class="statvalue" id="statHash">…</div><div class="statnote">Sum of user profile hash rates</div></div><div class="card"><div class="statlabel">Pending deposits</div><div class="statvalue" id="statDeposits">…</div><div class="statnote" id="depositVolume">Awaiting review</div></div><div class="card"><div class="statlabel">Pending withdrawals</div><div class="statvalue" id="statWithdrawals">…</div><div class="statnote" id="withdrawVolume">Awaiting processing</div></div><div class="card"><div class="statlabel">Banned accounts</div><div class="statvalue" id="statBanned">…</div><div class="statnote">Account status</div></div><div class="card"><div class="statlabel">Referral count</div><div class="statvalue" id="statReferrals">…</div><div class="statnote">Sum of referralCount fields</div></div></div>
 <div class="charts"><div class="card"><div class="sectionhead"><h2>User registrations</h2><span class="sub">Monthly, based on joinDate</span></div><div class="chartbox"><canvas id="usersChart"></canvas></div></div><div class="card"><div class="sectionhead"><h2>Deposit and withdrawal activity</h2><span class="sub">Last 14 days</span></div><div class="chartbox"><canvas id="flowChart"></canvas></div></div></div>
 <div class="charts"><div class="card"><div class="sectionhead"><h2>Balance distribution</h2><span class="sub">Current user balances</span></div><div class="chartbox"><canvas id="balanceChart"></canvas></div></div><div class="card"><div class="sectionhead"><h2>Transaction status</h2><span class="sub">Deposit and withdrawal records</span></div><div class="chartbox"><canvas id="statusChart"></canvas></div></div></div>
@@ -111,11 +136,11 @@ function showPage(p){["dashboard","users","deposits","withdrawals","notification
 function renderAll(){renderDashboard();renderUsers();renderDeposits();renderWithdrawals();fillTargets()}
 function emptyRow(n,t){return `<tr><td colspan="${n}" class="empty">${esc(t)}</td></tr>`}
 function pill(s){s=String(s||"pending").toLowerCase();return `<span class="pill ${esc(s)}">${esc(s)}</span>`}
-function renderDashboard(){const pendingD=deposits.filter(x=>(x.status||"pending").toLowerCase()==="pending"),pendingW=withdrawals.filter(x=>(x.status||"pending").toLowerCase()==="pending");$("statUsers").textContent=users.length;$("statAvailable").textContent=money(users.reduce((a,u)=>a+(Number(u.availableBalance)||0),0));$("statStaked").textContent=money(users.reduce((a,u)=>a+(Number(u.stakedBalance)||0),0));$("statHash").textContent=users.reduce((a,u)=>a+(Number(u.totalHash)||0),0).toLocaleString()+" TH";$("statDeposits").textContent=pendingD.length;$("statWithdrawals").textContent=pendingW.length;$("depositVolume").textContent=money(pendingD.reduce((a,x)=>a+(Number(x.amount)||0),0))+" awaiting review";$("withdrawVolume").textContent=money(pendingW.reduce((a,x)=>a+(Number(x.amount)||0),0))+" requested";$("statBanned").textContent=users.filter(u=>u.banned===true).length;$("statReferrals").textContent=users.reduce((a,u)=>a+(Number(u.referralCount)||0),0);
- const recent=[...users].sort((a,b)=>toMs(b.joinDate)-toMs(a.joinDate)).slice(0,7);$("recentUsers").innerHTML=recent.map(u=>`<tr><td>${esc(u.email||u.id)}</td><td>${money(u.availableBalance)}</td><td>${money(u.stakedBalance)}</td><td>${esc(u.totalHash||0)} TH</td><td>${esc(date(u.joinDate))}</td><td>${pill(u.banned?"banned":"active")}</td></tr>`).join("")||emptyRow(6,"No users found");const tx=[...deposits.map(x=>({...x,_type:"Deposit"})),...withdrawals.map(x=>({...x,_type:"Withdrawal"}))].sort((a,b)=>toMs(b.createdAt)-toMs(a.createdAt)).slice(0,10);$("recentTx").innerHTML=tx.map(x=>`<tr><td>${x._type}</td><td>${esc(x.userEmail||x.userId||"—")}</td><td>${money(x.amount)}</td><td>${esc(date(x.createdAt))}</td><td>${pill(x.status)}</td><td>${esc(x.txid||x.txId||x.address||"—")}</td></tr>`).join("")||emptyRow(6,"No transactions found");drawCharts()}
-function makeChart(id,type,data,options={}){if(charts[id])charts[id].destroy();const ctx=$(id);if(!ctx||!window.Chart)return;charts[id]=new Chart(ctx,{type,data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#aab9c8",boxWidth:10,font:{size:10}}}},scales:type==="doughnut"?{}:{x:{ticks:{color:"#8da0b3",maxRotation:0,autoSkip:true},grid:{color:"#26364655"}},y:{ticks:{color:"#8da0b3"},grid:{color:"#26364655"}}},...options}})}
-function drawCharts(){const now=new Date(),months=[];for(let i=5;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);months.push({key:d.getFullYear()+"-"+d.getMonth(),label:d.toLocaleString(undefined,{month:"short",year:"2-digit"}),count:0})}users.forEach(u=>{const d=new Date(toMs(u.joinDate));const x=months.find(m=>m.key===d.getFullYear()+"-"+d.getMonth());if(x)x.count++});makeChart("usersChart","line",{labels:months.map(x=>x.label),datasets:[{label:"New users",data:months.map(x=>x.count),borderColor:"#f4c84a",backgroundColor:"#f4c84a22",fill:true,tension:.35,pointRadius:3}]});const days=[];for(let i=13;i>=0;i--){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-i);days.push({key:d.toDateString(),label:d.toLocaleDateString(undefined,{day:"numeric",month:"short"}),dep:0,wd:0})}deposits.forEach(x=>{const d=new Date(toMs(x.createdAt)),r=days.find(z=>z.key===d.toDateString());if(r)r.dep+=Number(x.amount)||0});withdrawals.forEach(x=>{const d=new Date(toMs(x.createdAt)),r=days.find(z=>z.key===d.toDateString());if(r)r.wd+=Number(x.amount)||0});makeChart("flowChart","bar",{labels:days.map(x=>x.label),datasets:[{label:"Deposits",data:days.map(x=>x.dep),backgroundColor:"#48d6a0"},{label:"Withdrawals",data:days.map(x=>x.wd),backgroundColor:"#ff7183"}]},{scales:{x:{ticks:{color:"#8da0b3",maxRotation:0},grid:{display:false}},y:{ticks:{color:"#8da0b3"},grid:{color:"#26364655"}}}});const buckets=[0,0,0,0];users.forEach(u=>{const v=Number(u.availableBalance)||0;buckets[v===0?0:v<100?1:v<1000?2:3]++});makeChart("balanceChart","doughnut",{labels:["Zero","Under $100","$100 to $999","$1,000+"],datasets:[{data:buckets,backgroundColor:["#64748b","#79b6ff","#f4c84a","#48d6a0"],borderColor:"#101923",borderWidth:3}]},{cutout:"66%"});const all=[...deposits,...withdrawals],counts={};all.forEach(x=>{const s=String(x.status||"pending").toLowerCase();counts[s]=(counts[s]||0)+1});makeChart("statusChart","doughnut",{labels:Object.keys(counts),datasets:[{data:Object.values(counts),backgroundColor:["#f4c84a","#48d6a0","#ff7183","#79b6ff","#9b8afb","#64748b"],borderColor:"#101923",borderWidth:3}]},{cutout:"66%"});}
-function renderUsers(){const q=($("userSearch")?.value||"").toLowerCase(),st=$("userStatus")?.value||"all",sort=$("userSort")?.value||"newest";let list=users.filter(u=>(String(u.email||"").toLowerCase().includes(q)||u.id.toLowerCase().includes(q)||String(u.referralCode||"").toLowerCase().includes(q))&&(st==="all"||(st==="banned"?!!u.banned:!u.banned)));list.sort((a,b)=>sort==="oldest"?toMs(a.joinDate)-toMs(b.joinDate):sort==="balanceHigh"?(Number(b.availableBalance)||0)-(Number(a.availableBalance)||0):sort==="balanceLow"?(Number(a.availableBalance)||0)-(Number(b.availableBalance)||0):toMs(b.joinDate)-toMs(a.joinDate));const total=list.length,pages=Math.max(1,Math.ceil(total/pageSize));userPage=Math.min(userPage,pages);const shown=list.slice((userPage-1)*pageSize,userPage*pageSize);$("usersBody").innerHTML=shown.map(u=>`<tr><td>${esc(u.email||u.id)}</td><td>${money(u.availableBalance)}</td><td>${money(u.stakedBalance)}</td><td>${esc(u.totalHash||0)} TH</td><td>${esc(u.referralCode||"—")} (${Number(u.referralCount)||0})</td><td>${esc(date(u.joinDate))}</td><td>${pill(u.banned?"banned":"active")}</td><td><button class="btn small" onclick="openUser('${esc(u.id)}')">Inspect</button> <button class="btn primary small" onclick="openUserBalance('${esc(u.id)}')">Edit balance</button> <button class="btn danger small" onclick="deleteUser('${esc(u.id)}')">Delete</button></td></tr>`).join("")||emptyRow(8,"No matching users");$("userCount").textContent=total+" records";$("pageInfo").textContent=`Page ${userPage} of ${pages}, ${total} users`}
+function renderDashboard(){const pendingD=deposits.filter(x=>(x.status||"pending").toLowerCase()==="pending"),pendingW=withdrawals.filter(x=>(x.status||"pending").toLowerCase()==="pending");$("statUsers").textContent=users.filter(u=>!u.deleted).length;$("statAvailable").textContent=money(users.filter(u=>!u.deleted).reduce((a,u)=>a+(Number(u.availableBalance)||0),0));$("statStaked").textContent=money(users.filter(u=>!u.deleted).reduce((a,u)=>a+(Number(u.stakedBalance)||0),0));$("statHash").textContent=users.filter(u=>!u.deleted).reduce((a,u)=>a+(Number(u.totalHash)||0),0).toLocaleString()+" TH";$("statDeposits").textContent=pendingD.length;$("statWithdrawals").textContent=pendingW.length;$("depositVolume").textContent=money(pendingD.reduce((a,x)=>a+(Number(x.amount)||0),0))+" awaiting review";$("withdrawVolume").textContent=money(pendingW.reduce((a,x)=>a+(Number(x.amount)||0),0))+" requested";$("statBanned").textContent=users.filter(u=>u.banned===true).length;$("statReferrals").textContent=users.reduce((a,u)=>a+(Number(u.referralCount)||0),0);
+ const recent=[...users].filter(u=>!u.deleted).sort((a,b)=>toMs(b.joinDate)-toMs(a.joinDate)).slice(0,7);$("recentUsers").innerHTML=recent.map(u=>`<tr><td>${esc(u.email||u.id)}</td><td>${money(u.availableBalance)}</td><td>${money(u.stakedBalance)}</td><td>${esc(u.totalHash||0)} TH</td><td>${esc(date(u.joinDate))}</td><td>${pill(u.banned?"banned":"active")}</td></tr>`).join("")||emptyRow(6,"No users found");const tx=[...deposits.map(x=>({...x,_type:"Deposit"})),...withdrawals.map(x=>({...x,_type:"Withdrawal"}))].sort((a,b)=>toMs(b.createdAt)-toMs(a.createdAt)).slice(0,10);$("recentTx").innerHTML=tx.map(x=>`<tr><td>${x._type}</td><td>${esc(x.userEmail||x.userId||"—")}</td><td>${money(x.amount)}</td><td>${esc(date(x.createdAt))}</td><td>${pill(x.status)}</td><td>${esc(x.txid||x.txId||x.address||"—")}</td></tr>`).join("")||emptyRow(6,"No transactions found");drawCharts()}
+function makeChart(id,type,data,options={}){if(charts[id])charts[id].destroy();const ctx=$(id);if(!ctx||!window.Chart)return;charts[id]=new Chart(ctx,{type,data,options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:"#475569",boxWidth:10,font:{size:10}}}},scales:type==="doughnut"?{}:{x:{ticks:{color:"#64748B",maxRotation:0,autoSkip:true},grid:{color:"#E2E8F0"}},y:{ticks:{color:"#64748B"},grid:{color:"#E2E8F0"}}},...options}})}
+function drawCharts(){const now=new Date(),months=[];for(let i=5;i>=0;i--){const d=new Date(now.getFullYear(),now.getMonth()-i,1);months.push({key:d.getFullYear()+"-"+d.getMonth(),label:d.toLocaleString(undefined,{month:"short",year:"2-digit"}),count:0})}users.forEach(u=>{const d=new Date(toMs(u.joinDate));const x=months.find(m=>m.key===d.getFullYear()+"-"+d.getMonth());if(x)x.count++});makeChart("usersChart","line",{labels:months.map(x=>x.label),datasets:[{label:"New users",data:months.map(x=>x.count),borderColor:"#f4c84a",backgroundColor:"#f4c84a22",fill:true,tension:.35,pointRadius:3}]});const days=[];for(let i=13;i>=0;i--){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-i);days.push({key:d.toDateString(),label:d.toLocaleDateString(undefined,{day:"numeric",month:"short"}),dep:0,wd:0})}deposits.forEach(x=>{const d=new Date(toMs(x.createdAt)),r=days.find(z=>z.key===d.toDateString());if(r)r.dep+=Number(x.amount)||0});withdrawals.forEach(x=>{const d=new Date(toMs(x.createdAt)),r=days.find(z=>z.key===d.toDateString());if(r)r.wd+=Number(x.amount)||0});makeChart("flowChart","bar",{labels:days.map(x=>x.label),datasets:[{label:"Deposits",data:days.map(x=>x.dep),backgroundColor:"#48d6a0"},{label:"Withdrawals",data:days.map(x=>x.wd),backgroundColor:"#ff7183"}]},{scales:{x:{ticks:{color:"#64748B",maxRotation:0},grid:{display:false}},y:{ticks:{color:"#64748B"},grid:{color:"#E2E8F0"}}}});const buckets=[0,0,0,0];users.forEach(u=>{const v=Number(u.availableBalance)||0;buckets[v===0?0:v<100?1:v<1000?2:3]++});makeChart("balanceChart","doughnut",{labels:["Zero","Under $100","$100 to $999","$1,000+"],datasets:[{data:buckets,backgroundColor:["#64748b","#79b6ff","#f4c84a","#48d6a0"],borderColor:"#101923",borderWidth:3}]},{cutout:"66%"});const all=[...deposits,...withdrawals],counts={};all.forEach(x=>{const s=String(x.status||"pending").toLowerCase();counts[s]=(counts[s]||0)+1});makeChart("statusChart","doughnut",{labels:Object.keys(counts),datasets:[{data:Object.values(counts),backgroundColor:["#f4c84a","#48d6a0","#ff7183","#79b6ff","#9b8afb","#64748b"],borderColor:"#101923",borderWidth:3}]},{cutout:"66%"});}
+function renderUsers(){const q=($("userSearch")?.value||"").toLowerCase(),st=$("userStatus")?.value||"all",sort=$("userSort")?.value||"newest";let list=users.filter(u=>!u.deleted && (String(u.email||"").toLowerCase().includes(q)||u.id.toLowerCase().includes(q)||String(u.referralCode||"").toLowerCase().includes(q))&&(st==="all"||(st==="banned"?!!u.banned:!u.banned)));list.sort((a,b)=>sort==="oldest"?toMs(a.joinDate)-toMs(b.joinDate):sort==="balanceHigh"?(Number(b.availableBalance)||0)-(Number(a.availableBalance)||0):sort==="balanceLow"?(Number(a.availableBalance)||0)-(Number(b.availableBalance)||0):toMs(b.joinDate)-toMs(a.joinDate));const total=list.length,pages=Math.max(1,Math.ceil(total/pageSize));userPage=Math.min(userPage,pages);const shown=list.slice((userPage-1)*pageSize,userPage*pageSize);$("usersBody").innerHTML=shown.map(u=>`<tr><td>${esc(u.email||u.id)}</td><td>${money(u.availableBalance)}</td><td>${money(u.stakedBalance)}</td><td>${esc(u.totalHash||0)} TH</td><td>${esc(u.referralCode||"—")} (${Number(u.referralCount)||0})</td><td>${esc(date(u.joinDate))}</td><td>${pill(u.banned?"banned":"active")}</td><td><button class="btn small" onclick="openUser('${esc(u.id)}')">Inspect</button> <button class="btn primary small" onclick="openUserBalance('${esc(u.id)}')">Edit balance</button> <button class="btn danger small" onclick="deleteUser('${esc(u.id)}')">Delete</button></td></tr>`).join("")||emptyRow(8,"No matching users");$("userCount").textContent=total+" records";$("pageInfo").textContent=`Page ${userPage} of ${pages}, ${total} users`}
 function changeUserPage(n){userPage=Math.max(1,userPage+n);renderUsers()}
 async function openUser(id){
  const u=users.find(x=>x.id===id);if(!u)return;selectedUser=u;
@@ -346,7 +371,19 @@ async function deleteUser(uid){
   if(selectedUser?.id===uid)selectedUser=null;
   rootClear();renderUsers();renderDashboard();fillTargets();
   message("User deleted from Firestore. Also remove their login in Firebase Console > Authentication for full removal.");
- }catch(e){message("Delete user failed: "+e.message,"error");}
+ }catch(e){
+  const isPerm = String(e.code||e.message||"").toLowerCase().includes("permission") || String(e.message||"").includes("Missing or insufficient");
+  if(!isPerm){ message("Delete user failed: "+e.message,"error"); return; }
+  if(!confirm("Firestore Rules are blocking permanent delete.\n\nDo SOFT-DELETE instead?\nUser will disappear from Admin + Dashboard, be banned, and balances set to $0.")) return;
+  try{
+   await userRef.update({deleted:true,banned:true,availableBalance:0,stakedBalance:0,totalHash:0,deletedAt:firebase.firestore.FieldValue.serverTimestamp(),deletedBy:auth.currentUser?.email||"admin",adminNote:"Soft-deleted by admin (Rules blocked hard delete)"});
+   const fresh=await userRef.get();
+   if(fresh.exists){const updated={id,...fresh.data()};users=users.map(x=>x.id===uid?updated:x);}
+   if(selectedUser?.id===uid)selectedUser=null;
+   rootClear();renderUsers();renderDashboard();fillTargets();
+   message("User soft-deleted (hidden + banned + $0). For permanent delete, allow delete in Firestore Rules.");
+  }catch(e2){ message("Soft-delete also failed: "+e2.message,"error"); }
+ }
 }
 
 function rootClear(){$("userDetail").innerHTML=""}
@@ -369,25 +406,16 @@ function exportFullUsers(){downloadFile("cloudminer-user-records.json",JSON.stri
 function exportTransactions(type){const data=type==="deposits"?deposits:withdrawals;downloadFile("cloudminer-"+type+".json",JSON.stringify(data,null,2),"application/json")}
 </script>
 <script>
-// Fallback: never leave a blank page. If Firebase CDN failed or auth is slow, show login.
 (function(){
-  function showLoginFallback(){
-    var l=document.getElementById('login');
-    var a=document.getElementById('app');
-    if(l) l.classList.remove('hidden');
-    // If user is already signed in, app will be shown by onAuthStateChanged, don't hide it
-    if(a && !a.classList.contains('hidden')) return;
-  }
   window.addEventListener('load', function(){
     setTimeout(function(){
       var st=document.getElementById('firebaseStatus');
       if(typeof window.firebase==='undefined'){
         if(st) st.textContent='⚠ Firebase could not load. Check internet / ad-blocker and refresh.';
-        showLoginFallback();
       } else {
         if(st) st.textContent='✓ Connected to cloudminer-pro';
-        showLoginFallback();
       }
+      var l=document.getElementById('login'); if(l) l.classList.remove('hidden');
     }, 2500);
   });
 })();
