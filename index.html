@@ -3294,6 +3294,20 @@ window.__showConfirmCard = function(plan){
     extras.id = "cm-profile-extras";
     extras.style.cssText = "display:flex;flex-direction:column;gap:12px;margin-bottom:12px";
     renderKyc(extras);
+
+    // Customer Support card (added without changing existing profile features)
+    const supportCard = document.createElement("div");
+    supportCard.id = "cm-profile-support";
+    supportCard.style.cssText = "display:flex;align-items:center;gap:12px;background:#151a21;border:1px solid rgba(34,158,217,.3);border-radius:16px;padding:14px";
+    supportCard.innerHTML = `
+      <div style="width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:rgba(34,158,217,.15);display:flex;align-items:center;justify-content:center;color:#229ED9;font-size:22px">✈️</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13px;font-weight:700;color:#fff">24/7 Customer Support</div>
+        <div style="font-size:11px;color:#8b949e;margin-top:4px;line-height:1.5">Need assistance? Our Telegram support team is here to help.</div>
+      </div>
+      <a href="https://t.me/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" style="padding:9px 12px;border-radius:10px;background:#229ED9;color:#fff;font-size:11px;font-weight:700;white-space:nowrap;text-decoration:none">Get Support ↗</a>
+    `;
+    extras.appendChild(supportCard);
     const profileCard = Array.from(root.children).find(child =>
       (child.textContent || "").includes("Verified Miner • Level 2"));
     const nameEditor = document.getElementById("cm-profile-name-edit");
